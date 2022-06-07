@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Aulas - display flex</title>
+    <style>
+
+        .flex-container {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+
+        .flex-container-wrap {
+            display: flex;
+            height: 150px;
+            border: 2px solid black;
+            max-width: 400px;
+            flex-direction: row;
+        }
+
+        .item-wrap{
+            font-size: 24px;
+            height: 50%;
+            text-align: center;
+            min-width: 100px;
+            line-height: 50px;
+        }
+
+
+        .item {
+            background-color: aqua;
+            margin: 5px;
+        }
+
+        .flex-item {
+            background: blue;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .row {
+            flex-direction: row;
+        }
+
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+
+        .row-reverse li {
+            background-color: red;
+        }
+
+        .colunn{
+            float: left;
+            flex-direction: column;
+        }
+
+        .colunn li{
+            background: orange;
+        }
+
+        .colunn-reverse{
+            float: right;
+            flex-direction: column-reverse;
+        }
+
+        .colunn-reverse li{
+            background: purple;
+        }
+
+        .nowrap{
+            flex-wrap: nowrap;
+         }
+
+         .wrap {
+             flex-wrap: wrap;
+         }
+
+         .wrap-reverse{
+             flex-wrap: wrap-reverse;
+         }
+
+         .blue{
+             background-color: blue;
+         }
+
+         .green {
+            background-color: green;
+         }
+
+         .orange{
+             background-color: orange;
+         }
+            
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">Item Marcos</div>
+    </div>
+
+    <ul class="flex-container row">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+
+    <ul class="flex-container row-reverse">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+    
+    <ul class="flex-container colunn">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+    
+    <ul class="flex-container colunn-reverse">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+
+    <h1>nowrap</h1>
+
+    <div class="flex-container-wrap nowrap">
+        <div class="item-wrap orange">1</div>
+        <div class="item-wrap green">2</div>
+        <div class="item-wrap orange">3</div>
+        <div class="item-wrap blue">4</div>
+        <div class="item-wrap green">5</div>
+
+    </div>
+
+    <h1>wrap</h1>
+
+    <div class="flex-container-wrap wrap">
+        <div class="item-wrap green">1</div>
+        <div class="item-wrap blue">2</div>
+        <div class="item-wrap orange">3</div>
+        <div class="item-wrap blue">4</div>
+        <div class="item-wrap orange">5</div>        
+    </div>
+
+    <h1>wrap-reverse</h1>
+
+    <div class="flex-container-wrap wrap-reverse">
+        <div class="item-wrap green">1</div>
+        <div class="item-wrap blue">2</div>
+        <div class="item-wrap orange">3</div>
+        <div class="item-wrap blue">4</div>
+        <div class="item-wrap orange">5</div>        
+    </div>
+
+</body>
+</html>
