@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Align self</title>
+
+    <style>
+
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .item{
+            flex: 1;
+            background-color: brown;
+            color: pink;
+            text-align: center;
+            font-size: 24px;
+            margin: 10px;
+        }
+
+        .align-conteiner{
+            align-items: center;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+        
+        .auto{
+            align-self: auto;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+    </style>
+
+</head>
+<body>
+    <p>Align: Center</p>
+    <div class="flex-container align-conteiner">
+        <div class="item">A-A-A</div>
+        <div class="item">1-2-3</div>
+        <div class="item">Clique no botão "Go Live"</div>
+        <div class="item">Item 4</div>
+    </div>
+
+    <p>Align: Center</p>
+    <div class="flex-container">
+        <div class="item start">A-A-A</div>
+        <div class="item center">1-2-3</div>
+        <div class="item">Clique no botão "Go Live"</div>
+        <div class="item end">Item 4</div>
+    </div>
+
+    <p>Align: column</p>
+    <div class="flex-container column">
+        <div class="item start">A-A-A</div>
+        <div class="item center">1-2-3</div>
+        <div class="item">Clique no botão "Go Live"</div>
+        <div class="item center">Item 4</div>
+    </div>
+
+</body>
+</html>
